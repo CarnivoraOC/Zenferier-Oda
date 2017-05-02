@@ -1,0 +1,338 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+main{
+    padding: 2%;
+}
+
+body *{
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+/*Slutt GENERAL*/
+
+/*HEADER*/
+header{
+    margin-bottom: 30px;
+    margin-top: 0;
+    width: auto;
+    position: relative;
+}
+
+#banner{
+    display: none;
+    position: relative;
+}
+
+#bannerImg{
+    width: 100%;
+    opacity: 0.8;
+    -webkit-filter: blur(3px);
+}
+
+#bannerText{
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    opacity: 0.8;
+    font-weight: lighter;
+    background-color: rgba(235, 207, 93, 0.6);
+    padding: 10%;
+    padding-right: 20%;
+    padding-left: 20%;
+    font-family: 'Indie flower', sans-serif;
+}
+/*Slutt HEADER*/
+
+/*NAVIGATION*/
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+    z-index:1;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.menu-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: background-color 1s;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 99%);
+}
+
+#logo{
+    background-color: #FFFFFF;
+    font-size: 2.5em;
+}
+
+#logo a{
+    font-weight: bolder;
+}
+
+li {
+    float: left;
+    width: 25%;
+    text-align:center;
+}
+
+li a {
+    display: inline-block;
+    color: #67C4EB;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/*Slutt NAVIGATION*/
+
+/*PRODUCT BOXES*/
+.article {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.img-responsive{
+    width: 100%;
+    opacity: 1;
+}
+
+.product-box{
+    margin: 0;
+    margin-bottom: 3%;
+}
+
+.product-content-box {
+    background-color: rgba(108, 245, 197, 0.7);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+h3{
+    font-weight: bolder;
+    color: #111111;
+    font-size: 1.3em;
+    padding-bottom: 1em;
+}
+
+p{
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5em;
+}
+
+.product-text{
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+
+.product-text a {
+    width: 100%;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-size: 1.3em;
+    padding: 0.3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    -webkit-transition: background-color 1s;
+}
+
+/*Slutt PRODUCT BOXES*/
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid black;
+    padding: 3%;
+    opacity: 0.7;
+}
+
+footer a{
+    color: #111;
+}
+/*Slutt FOOTER*/
+
+/*MOBILE - 1 row - */ 
+@media screen and (max-width: 599px){
+    main{
+    padding: 0%;
+    }  
+    .product-content-box {
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+    #logo{
+        background-color: #67C4EB;
+    }
+	li {
+		margin-bottom: 0.5em;
+	}
+	ul li, li a {
+		width: 100%;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+	}
+
+    .product-content-box {
+    background-color: rgba(108, 245, 197, 0.7);
+    }
+
+    .product-content-box .img-responsive{
+        opacity: 1;
+    }
+}
+/*Slutt MOBILE - 1 row - */
+
+/*TABLET - 2 rows - I denne querien endres noen av artiklene slik at de er horisontale.*/
+@media screen and (min-width: 600px) and (max-width: 1023px){  
+    
+    #banner{
+    display: block;  
+    }
+    
+    .big-flex-parent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-box{
+        float: left;
+    }
+    
+    .col-8{
+        width: 66.66%;
+        display: flex;
+    }
+
+    .col-noFlex{
+        width: 33.33%;
+        display: flex;
+    }
+
+    .flex-parent{
+        display: flex;
+        overflow: hidden;
+    }
+        
+     .flex-img{
+        flex: 3;
+        min-height: 100%;
+        opacity: 0;  
+    }
+    
+    .img-responsive{
+        min-height: 100%;
+      
+    }
+    
+    .flex-text{
+        flex: 1;
+        padding-left: 0.5em;
+    }
+    #berlinImg{
+        background-image: url(../bilder/berlin.jpg);
+        background-size: auto;
+    }    
+    
+    #osloImg{
+        background-size: auto;
+        background-image: url(../bilder/frognerparken.jpg);
+    }
+    
+    #barcelonaImg{
+        background-image: url(../bilder/barcelona.jpg);
+        background-size: auto;
+    }
+    
+    .product-content-box{
+        background-color: transparent;
+    }
+    
+    .product-text{
+        background-color: rgba(108, 245, 197, 0.8);
+    }
+
+}
+/*Slutt TABLET - 2 rows - */
+
+/*SCREEN - 3 rows - */
+@media screen and (min-width: 1024px){
+    #banner{
+    display: block;  
+    }
+
+    .product-box{
+        float: left;
+    }
+    
+    .big-flex-parent{
+        display: block;
+    }
+    .col-4{
+        width: 33.33%;
+    }
+    .flex-parent{
+        display: block;
+    }
+    .img-responsive{
+    opacity: 0.5;
+    -webkit-transition: all 1s;
+    }
+    .product-content-box {
+    background-color: rgba(108, 245, 197, 0.2);
+    -webkit-transition: all 1s;
+    }
+    .product-content-box:hover {
+    background-color: rgba(108, 245, 197, 0.7);
+    }
+
+    .product-content-box:hover .img-responsive{
+        opacity: 1;
+    }
+    #logo:hover{
+    background-color: #67C4EB;
+    }
+
+    li:hover{
+        background-color: #EBCF5D;
+    }
+    
+    .product-text a:hover {
+        background-color: #70DE6D;
+    } 
+    footer{
+    clear: both;
+    z-index: 10;
+    margin-top: -3em;
+    }
+}
+/*Slutt SCREEN - 3 rows - */
+
+/*BIG SCREEN - 4 rows - */
+@media screen and (min-width: 1240px){
+    .product-box{
+        float: left;
+    }
+    
+    .big-flex-parent{
+        display: block;
+    }
+    .col-3{
+        width: 25%;
+    }
+    .flex-parent{
+        display: block;
+    }
+}
+
+
+    
+
+
